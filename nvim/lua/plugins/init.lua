@@ -115,8 +115,28 @@ return {
 
     -- ~  Rust tools
   {
-  'mrcjkb/rustaceanvim',
-  version = '^5', -- Recommended
-  lazy = false, -- This plugin is already lazy
-  }
+    'mrcjkb/rustaceanvim',
+    version = '^5', -- Recommended
+    lazy = false, -- This plugin is already lazy
+  },
+  
+  {
+    'saecki/crates.nvim',
+    event = { "BufRead Cargo.toml" },
+    tag = 'stable',
+    config = function()
+        require('crates').setup()
+    end,
+  },
+
+  --Task orchestra build
+  {
+  'stevearc/overseer.nvim',
+  opts = {},
+  },
+
+  -- CMAKE 
+  {
+    'Civitasv/cmake-tools.nvim',
+  },
 }

@@ -37,3 +37,7 @@ vim.schedule(function()
 end)
 
 require "globals"
+
+require("overseer").setup({
+  templates = { "builtin", "user.cpp_build" },
+})

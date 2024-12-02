@@ -80,5 +80,6 @@ map("n", "H", function()
 	require("nvchad.tabufline").prev()
 end, { desc = "Go to previous buffer" })
 
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
